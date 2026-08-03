@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ケアマネの書類作成をブラウザで｜ケアマネジャー業務支援ツール CHERRY BLOSSOM</title>
+<title>ジェノグラム・エコマップ作成ツール｜ケアマネジャー業務支援 CHERRY BLOSSOM</title>
 <meta name="google-site-verification" content="jCkOEUj0ZYcPrHef5AaNU4QMUrO-uWy1EYOEGufQzLI" />
-<meta name="description" content="ケアマネジャー（介護支援専門員）の書類作成を支えるWebツール。要介護認定申請書・福祉用具購入理由書・退院退所情報記録書・入院時情報提供書・ジェノグラムをブラウザで作成し、印刷・Excel出力。インストール不要、月額550円（税込）・14日間無料。">
+<meta name="description" content="ジェノグラム（家族関係図）とエコマップをブラウザで作成できるツール。人物記号と関係線を選んで置くだけで作図し、画像保存・印刷。要介護認定申請書・退院退所情報記録書などケアマネジャーの書類作成にも対応。インストール不要、月額550円（税込）・14日間無料。">
 <link rel="canonical" href="https://keamane.cb-cloud.net/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CHERRY BLOSSOM｜ケアマネ業務支援ツール">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="ケアマネの書類作成をブラウザで｜ケアマネジャー業務支援ツール CHERRY BLOSSOM">
-<meta property="og:description" content="要介護認定申請書・福祉用具購入理由書・退院退所情報記録書・入院時情報提供書・ジェノグラムをブラウザで作成し、印刷・Excel出力。インストール不要、月額550円（税込）・14日間無料。">
+<meta property="og:title" content="ジェノグラム・エコマップ作成ツール｜ケアマネジャー業務支援 CHERRY BLOSSOM">
+<meta property="og:description" content="ジェノグラム（家族関係図）とエコマップをブラウザで作成。人物記号と関係線を選んで置くだけで作図し、画像保存・印刷。ケアマネジャーの書類作成にも対応。月額550円（税込）・14日間無料。">
 <meta property="og:url" content="https://keamane.cb-cloud.net/">
 <meta property="og:image" content="https://keamane.cb-cloud.net/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -52,19 +52,21 @@
     },
     {
       "@type": "SoftwareApplication",
-      "name": "CHERRY BLOSSOM ケアマネ業務支援ツール",
+      "name": "CHERRY BLOSSOM ジェノグラム・エコマップ作成ツール",
       "url": "https://keamane.cb-cloud.net/",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "介護・ケアマネジメント業務支援",
       "operatingSystem": "Web ブラウザ",
       "inLanguage": "ja",
-      "description": "ケアマネジャー（介護支援専門員）向けの書類作成Webツール。要介護・要支援認定申請書、福祉用具購入理由書、退院・退所情報記録書、入院時情報提供書、ジェノグラムをブラウザ上で作成し、印刷・Excel出力できます。",
+      "description": "ジェノグラム（家族関係図）とエコマップをブラウザ上で作図できるツール。人物記号と関係線を選んで配置するだけで作成でき、画像保存・印刷ができます。要介護・要支援認定申請書、福祉用具購入理由書、退院・退所情報記録書、入院時情報提供書などケアマネジャーの書類作成にも対応しています。",
       "featureList": [
+        "ジェノグラム（家族関係図）の作成",
+        "エコマップの作成",
+        "作図した図の画像保存・印刷",
         "要介護・要支援認定申請書の作成",
         "福祉用具購入理由書の作成",
         "退院・退所情報記録書の作成",
         "入院時情報提供書の作成",
-        "ジェノグラム（家族関係図）の作成",
         "記入済みExcelの読み込みと再編集"
       ],
       "publisher": { "@id": "https://keamane.cb-cloud.net/#org" },
@@ -81,10 +83,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "どんな書類が作成できますか？",
+          "name": "ジェノグラムやエコマップは作成できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "要介護・要支援認定申請書、福祉用具購入理由書、退院・退所情報記録書、入院時情報提供書、ジェノグラム（家族関係図）を作成できます。記入済みのExcelを読み込んで続きから編集することもできます。"
+            "text": "作成できます。男性・女性・本人・死亡・妊娠などの人物記号と、婚姻・離婚・別居・同居・親子といった関係線を選んで配置するだけで作図できます。病院・デイサービス・行政・近所・職場・友人などの社会資源を置いてエコマップを描くこともでき、強い関係・希薄な関係・葛藤／ストレスなど関係の質も線種で表せます。作った図は画像として保存でき、印刷もできます。"
           }
         },
         {
@@ -202,8 +204,14 @@
   .op-row dd .ph{color:var(--rose);background:var(--petal-bg);padding:1px 7px;border-radius:5px;font-size:13px;}
   .op-note{max-width:760px;margin:18px auto 0;font-size:12px;color:var(--sub);line-height:1.7;}
 
+  /* genogram */
+  .genogram{background:var(--petal-bg);}
+  .genogram .more{text-align:center;margin-top:34px;}
+  .genogram .more a{color:var(--rose-dark);font-weight:700;font-size:14px;text-decoration:none;border-bottom:1px solid var(--rose-soft);padding-bottom:2px;}
+  .genogram .more a:hover{color:var(--rose);}
+
   /* guide */
-  .guide{background:var(--petal-bg);}
+  .guide{background:var(--white);border-top:1px solid var(--line);}
   .guide .grid{grid-template-columns:repeat(2,1fr);}
   a.card{display:block;text-decoration:none;color:inherit;}
   a.card h3{color:var(--rose-dark);}
@@ -247,6 +255,7 @@
     <img src="/assets/logo.png" width="440" height="350" alt="CHERRY BLOSSOM ロゴ">
     <span class="name">CHERRY BLOSSOM<small>Care Management Tools</small></span>
     <nav>
+      <a href="#genogram">ジェノグラム</a>
       <a href="/guide/">書類作成ガイド</a>
       <a href="/faq/">よくある質問</a>
       <a href="#pricing">料金</a>
@@ -261,20 +270,64 @@
   <svg class="petal p2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 8c6 14 20 18 28 14-4 9-1 22 8 27-13 3-20 15-19 25-8-7-22-7-30 0 1-10-6-22-19-25 9-5 12-18 8-27 8 4 22 0 28-14z" fill="#eebcd0"/></svg>
   <svg class="petal p3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 8c6 14 20 18 28 14-4 9-1 22 8 27-13 3-20 15-19 25-8-7-22-7-30 0 1-10-6-22-19-25 9-5 12-18 8-27 8 4 22 0 28-14z" fill="#f3c6d8"/></svg>
   <div class="wrap">
-    <span class="eyebrow">ケアマネジャーのための業務支援ツール</span>
-    <h1 class="serif">書類づくりの時間を、<br><span class="accent">利用者と向き合う時間</span>へ。</h1>
-    <p class="lead">要介護認定の申請書から退院・退所の記録書まで、ケアマネジャーが日々使う書類をブラウザ上で入力して、印刷・Excel出力。専用ソフトのインストールは不要です。</p>
+    <span class="eyebrow">ケアマネジャーのためのジェノグラム・エコマップ作成ツール</span>
+    <h1 class="serif">ジェノグラムを、<br><span class="accent">その場で描いて印刷</span>。</h1>
+    <p class="lead">手書きやExcelでは作りにくい家族関係図を、人物記号と関係線を選んで置くだけで作図。社会資源とのつながりを示すエコマップにも対応しています。要介護認定申請書などの書類作成も、同じツールの中で完結します。</p>
     <a class="cta" href="#pricing">料金を見る</a>
     <p class="note"><strong style="color:var(--rose);">14日間無料でお試し</strong> ／ その後 月額550円（税込）／ いつでも解約できます</p>
   </div>
 </div>
+
+<!-- GENOGRAM（主力機能） -->
+<section class="genogram" id="genogram">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">GENOGRAM &amp; ECOMAP</span>
+      <h2 class="serif">ジェノグラムとエコマップを、ドラッグで作図</h2>
+      <p>記号のルールを覚えていなくても、一覧から選んで置いていくだけで整った図になります。</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7"/><circle cx="17.5" cy="7.5" r="3.5"/><path d="M6.5 11v4h11v-4M12 15v5"/></svg></div>
+        <h3>人物の記号がそろっている</h3>
+        <p>男性・女性・本人・死亡・妊娠・不明まで、ジェノグラムで使う記号を一覧から選べます。名前と年齢を入れれば図形の中に表示されます。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><path d="M7.5 6h9M12 8v5"/><circle cx="12" cy="18" r="2.5"/></svg></div>
+        <h3>家族の関係線を引くだけ</h3>
+        <p>婚姻・離婚・別居・同居／内縁・親子の関係を線でつなぎます。世帯を点線で囲んで、同居の範囲を示すこともできます。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M9.5 10L6 6.5M14.5 10L18 6.5M9.5 14L6 17.5M14.5 14L18 17.5"/></svg></div>
+        <h3>エコマップにも対応</h3>
+        <p>病院・デイサービス・行政・近所・職場・友人といった社会資源を配置して、本人とのつながりを描けます。ジェノグラムと同じ画面で作れます。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 8h18M3 12h18M3 16h12"/></svg></div>
+        <h3>関係の質を線で表せる</h3>
+        <p>強い関係・普通の関係・希薄な関係・葛藤／ストレス・一方向／双方向の関わりを線種で描き分けられます。支援の空白が図で見えるようになります。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/><path d="M8 9h4"/></svg></div>
+        <h3>画像保存・印刷ができる</h3>
+        <p>作った図はそのまま印刷できるほか、画像として保存できます。アセスメントシートやサービス担当者会議の資料に添付して使えます。</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>後から直せる</h3>
+        <p>拡大・縮小や全体表示で位置を整えながら作図。文字サイズも変えられます。家族の状況が変わったときは、図を呼び出して直せます。</p>
+      </div>
+    </div>
+    <p class="more"><a href="/guide/genogram/">ジェノグラムの書き方と記号の意味を見る →</a></p>
+  </div>
+</section>
 
 <!-- FEATURES -->
 <section class="features">
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">FEATURES</span>
-      <h2 class="serif">作成できる書類</h2>
+      <h2 class="serif">書類作成もまとめて</h2>
       <p>居宅介護支援の現場でよく使う書類を、入力フォームから手早く。</p>
     </div>
     <div class="grid">
@@ -299,11 +352,6 @@
         <p>入院先へ渡す情報提供書を作成。事業所情報は保存して使い回せます。</p>
       </div>
       <div class="card">
-        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><path d="M7 10v4h10v-4M12 14v6"/></svg></div>
-        <h3>ジェノグラム（家族関係図）</h3>
-        <p>家族構成を図にまとめて、アセスメントや記録に添付できます。</p>
-      </div>
-      <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
         <h3>Excel読み込み・再編集</h3>
         <p>これまで使っていたExcelの様式を読み込み、フォームに復元して編集を続けられます。</p>
@@ -321,6 +369,14 @@
       <p>それぞれの書類が何を書く様式なのか、どこでつまずきやすいのかをまとめています。</p>
     </div>
     <div class="grid">
+      <a class="card" href="/guide/genogram/">
+        <h3>ジェノグラム（家族関係図）の書き方と記号一覧</h3>
+        <p>基本記号の一覧、描く手順、手書き・Excel・専用ツールの比較、エコマップとの違い。</p>
+      </a>
+      <a class="card" href="/guide/ecomap/">
+        <h3>エコマップの書き方と記号・線の意味</h3>
+        <p>線の種類による関係の質の描き分け、配置する社会資源、図からの読み取り方。</p>
+      </a>
       <a class="card" href="/guide/care-plan/">
         <h3>ケアプラン（居宅サービス計画書）第1表〜第7表の書き方</h3>
         <p>第1表〜第7表の役割と、アセスメントからモニタリングまでの業務の流れ。運営基準減算の注意点も。</p>
@@ -340,10 +396,6 @@
       <a class="card" href="/guide/fukushi-yogu-kounyu-riyusho/">
         <h3>福祉用具購入理由書の書き方と申請の流れ</h3>
         <p>特定福祉用具販売の対象種目と支給限度額、理由書で押さえるべき4点。</p>
-      </a>
-      <a class="card" href="/guide/genogram/">
-        <h3>ジェノグラム（家族関係図）の書き方と記号の意味</h3>
-        <p>基本記号のルール、描く手順、エコマップとの違い。</p>
       </a>
     </div>
     <p class="more"><a href="/guide/">書類作成ガイドの一覧を見る →</a></p>
@@ -365,6 +417,7 @@
       <div class="tax">税込価格です</div>
       <ul>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>14日間の無料トライアル付き。無料期間中の解約なら料金はかかりません</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>ジェノグラム・エコマップが作り放題</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>すべての書類作成機能が使えます</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>インストール不要、ブラウザだけで完結</li>
         <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>いつでも解約できます</li>
@@ -406,6 +459,8 @@
     <small>ケアマネジャーのための業務支援ツール</small>
     <nav>
       <a href="/guide/">書類作成ガイド</a>
+      <a href="/guide/genogram/">ジェノグラムの書き方</a>
+      <a href="/guide/ecomap/">エコマップの書き方</a>
       <a href="/guide/care-plan/">ケアプランの書き方</a>
       <a href="/guide/youkaigo-nintei-shinseisho/">要介護認定申請書</a>
       <a href="/guide/nyuinji-joho-teikyosho/">入院時情報提供書</a>

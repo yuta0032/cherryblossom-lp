@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>給付管理業務の流れ｜サービス利用票（第6表）と別表（第7表）の作り方｜CHERRY BLOSSOM</title>
+<meta name="description" content="居宅介護支援の給付管理業務について、月の流れ（提供票の交付から実績確認、給付管理票の作成、国保連への伝送まで）、第6表・第7表の役割、区分支給限度基準額の管理、よくあるミスを整理しました。">
+<link rel="canonical" href="https://keamane.cb-cloud.net/guide/kyufu-kanri/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CHERRY BLOSSOM｜ケアマネ業務支援ツール">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="給付管理業務の流れ｜サービス利用票（第6表）と別表（第7表）の作り方｜CHERRY BLOSSOM">
+<meta property="og:description" content="居宅介護支援の給付管理業務について、月の流れ（提供票の交付から実績確認、給付管理票の作成、国保連への伝送まで）、第6表・第7表の役割、区分支給限度基準額の管理、よくあるミスを整理しました。">
+<meta property="og:url" content="https://keamane.cb-cloud.net/guide/kyufu-kanri/">
+<meta property="og:image" content="https://keamane.cb-cloud.net/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "トップ",
+          "item": "https://keamane.cb-cloud.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "書類作成ガイド",
+          "item": "https://keamane.cb-cloud.net/guide/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "給付管理業務",
+          "item": "https://keamane.cb-cloud.net/guide/kyufu-kanri/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "給付管理業務の流れとサービス利用票（第6表・第7表）",
+      "description": "居宅介護支援の給付管理業務について、月の流れ（提供票の交付から実績確認、給付管理票の作成、国保連への伝送まで）、第6表・第7表の役割、区分支給限度基準額の管理、よくあるミスを整理しました。",
+      "inLanguage": "ja",
+      "mainEntityOfPage": "https://keamane.cb-cloud.net/guide/kyufu-kanri/",
+      "image": "https://keamane.cb-cloud.net/assets/og-image.png",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+      "author": {
+        "@type": "Organization",
+        "name": "CHERRY BLOSSOM"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CHERRY BLOSSOM",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://keamane.cb-cloud.net/assets/logo.png"
+        }
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="/">
+      <img src="/assets/logo.png" width="440" height="350" alt="CHERRY BLOSSOM">
+      <span class="name">CHERRY BLOSSOM<small>Care Management Tools</small></span>
+    </a>
+    <nav>
+      <a href="/guide/">書類作成ガイド</a>
+      <a href="/faq/">よくある質問</a>
+      <a href="/#pricing">料金</a>
+    </nav>
+    <a class="login-btn" href="https://keamane-kiroku.cb-cloud.net">ログイン／利用をはじめる</a>
+  </div>
+</header>
+
+<nav class="crumb" aria-label="パンくずリスト">
+  <div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/guide/">書類作成ガイド</a></li><li>給付管理業務</li></ol></div>
+</nav>
+
+<main class="page">
+  <div class="wrap narrow">
+    <h1 class="serif">給付管理業務の流れとサービス利用票（第6表・第7表）</h1>
+    <p class="lead">給付管理は毎月1日から10日に集中する、締切のある業務です。月の流れと、第6表・第7表が何を担っているのかを整理します。</p>
+    <p class="updated">最終更新：2026-08-03</p>
+<nav class="toc"><p>目次</p><ol><li><a href="#about">給付管理とは</a></li><li><a href="#flow">1か月の流れ</a></li><li><a href="#forms">第6表と第7表の役割</a></li><li><a href="#gendo">区分支給限度基準額の管理</a></li><li><a href="#irregular">月途中に異動があった場合</a></li><li><a href="#mistakes">よくあるミス</a></li></ol></nav>
+<h2 class="serif" id="about">給付管理とは</h2>
+<p>給付管理は、利用者が<strong>区分支給限度基準額の範囲内でサービスを利用しているかを管理し、その内容を国民健康保険団体連合会（国保連）に届け出る</strong>業務です。</p>
+<p>ケアマネジャーが給付管理票を提出しないと、サービス事業所が請求しても支払われません。<strong>1件の漏れが、複数の事業所の入金に影響します。</strong>他の業務と違って、締切を過ぎると翌月に持ち越しになる点も特徴です。</p>
+<h2 class="serif" id="flow">1か月の流れ</h2>
+<div class="tbl-scroll"><table><thead><tr><th>時期</th><th>やること</th></tr></thead><tbody><tr><td>前月の中旬〜下旬</td><td>翌月のサービス利用票（第6表）・別表（第7表）を作成し、利用者に説明・確認</td></tr><tr><td>前月末まで</td><td>各サービス事業所へ提供票を交付する</td></tr><tr><td>当月</td><td>サービス提供。変更があればその都度、利用票を修正する</td></tr><tr><td>翌月1日〜</td><td>各事業所から提供票の実績が返ってくる。予定と実績のずれを確認する</td></tr><tr><td>翌月上旬</td><td>実績を確定させ、給付管理票を作成する</td></tr><tr><td>翌月10日まで</td><td>国保連へ伝送する（給付管理票・介護給付費請求）</td></tr></tbody></table></div>
+<p>月初の10日間に業務が集中するのが給付管理の宿命です。<strong>前月中にどれだけ利用票を固めておけるか</strong>で、月初の負荷が決まります。</p>
+<h2 class="serif" id="forms">第6表と第7表の役割</h2>
+<h3>第6表：サービス利用票</h3>
+<p>その月にどのサービスを、どの日に、何回利用するかを日付ごとに記載した表です。<strong>予定を書いて事業所に渡し、実績が返ってくる</strong>という往復の道具でもあります。</p>
+<p>利用者にとっては「今月どれだけサービスを使うか」を確認する資料でもあるので、説明して確認を得ておきます。</p>
+<h3>第7表：サービス利用票別表</h3>
+<p>サービスごとの単位数、区分支給限度基準額の範囲内かどうか、利用者の自己負担額を計算した表です。<strong>限度額を超える部分は全額自己負担</strong>になるため、超過が出る場合は事前に本人・家族へ説明しておく必要があります。</p>
+<p>第7表は金額に直結します。単位数の拾い漏れ、加算の付け忘れ、負担割合の誤りは、そのまま利用者の負担額の誤りになります。</p>
+<h2 class="serif" id="gendo">区分支給限度基準額の管理</h2>
+<p>要介護度ごとに、1か月に使える単位数の上限（区分支給限度基準額）が定められています。プランを組む段階で、この枠に収まっているかを確認します。</p>
+<ul><li>限度額の対象になるサービスと、ならないサービス（居宅療養管理指導など）を区別する</li><li>月の日数によって回数が変わるサービス（週◯回のもの）は、月ごとに単位数が変動する</li><li><strong>月の途中で要介護度が変わった場合は、月末時点の要介護度で請求する</strong></li><li>住宅改修・福祉用具購入は別枠（<a href="/guide/fukushi-yogu-kounyu-riyusho/">年度10万円の枠</a>など）</li></ul>
+<p>限度額をわずかに超えるプランは、本人負担の増加につながります。超える場合は、<strong>なぜ必要なのかを説明して同意を得たうえで</strong>組みます。</p>
+<h2 class="serif" id="irregular">月途中に異動があった場合</h2>
+<p>月の途中で状況が変わったときの扱いは、あらかじめ整理しておくと迷いません。</p>
+<div class="tbl-scroll"><table><thead><tr><th>ケース</th><th>扱い</th></tr></thead><tbody><tr><td>月途中の死亡・入所</td><td>給付管理票を提出した事業者が算定する</td></tr><tr><td>月途中の事業者変更</td><td>変更後の事業者のみが算定する</td></tr><tr><td>月途中の要介護度変更</td><td>月末時点の要介護度で請求する</td></tr><tr><td>他市町村への転出</td><td>転出の前後で給付管理票を分け、それぞれ算定できる</td></tr></tbody></table></div>
+<div class="note">取扱いは通知やQ&Aで細かく定められており、改正で変わることがあります。判断に迷うケースは保険者や国保連に確認してください。<strong>制度改正についての注意：</strong>介護保険制度は概ね3年ごとの報酬改定に加えて期中の改正もあり、様式・加算の要件・単位数は変更されることがあります。実際の運用にあたっては、必ず厚生労働省の最新の告示・通知と、保険者（市区町村）の定める様式・取扱いをご確認ください。</div>
+<h2 class="serif" id="mistakes">よくあるミス</h2>
+<ul><li><strong>提供票の実績が返ってこないまま締切を迎える</strong> — 未回収の事業所を早めに一覧化して催促する</li><li><strong>予定と実績のずれを反映し忘れる</strong> — キャンセル・追加は都度、利用票に反映する</li><li><strong>ケアプランに位置づけていないサービスの実績が上がってくる</strong> — 位置づけのないサービスは給付対象にならない。第2表に戻って確認する</li><li><strong>負担割合証の確認漏れ</strong> — 年度替わりで割合が変わることがある</li><li><strong>限度額超過を本人に伝えていない</strong> — 請求後に発覚すると、信頼を大きく損なう</li></ul>
+<p>給付管理のミスは、金額と入金に直接影響します。ケアマネジャー本人だけでなく、複数のサービス事業所に迷惑がかかるため、<strong>ダブルチェックの体制を組む価値がもっとも高い業務</strong>です。</p>
+<h2 class="serif" id="related">関連するガイド</h2><ul class="cards"><li><a href="/guide/assessment/"><span class="t">アセスメント（課題分析）の進め方と標準項目23</span><span class="d">課題分析標準項目23項目、聞き取りのコツ、ニーズへの落とし方。</span></a></li><li><a href="/guide/care-plan/"><span class="t">ケアプラン（居宅サービス計画書）第1表〜第7表の書き方</span><span class="d">第1表〜第7表の役割と、アセスメントからモニタリングまでの流れ。</span></a></li><li><a href="/guide/care-plan-1/"><span class="t">ケアプラン第1表の書き方と記載例</span><span class="d">意向欄・総合的な援助の方針を、記載例つきで解説。</span></a></li><li><a href="/guide/care-plan-2/"><span class="t">ケアプラン第2表の書き方｜ニーズと長期・短期目標</span><span class="d">ニーズ・目標・サービスのつなげ方を記載例つきで。よくある指摘も。</span></a></li><li><a href="/guide/tantosha-kaigi/"><span class="t">サービス担当者会議の進め方と第4表の書き方</span><span class="d">開催のタイミング、進め方、第4表の記載、照会の扱い。</span></a></li><li><a href="/guide/shien-keika/"><span class="t">支援経過（第5表）の書き方と記録の残し方</span><span class="d">何を書くか、悪い例と良い例、運営指導で問われる観点。</span></a></li><li><a href="/guide/monitoring/"><span class="t">モニタリングの進め方と記録の書き方</span><span class="d">月1回の訪問・記録の要件、オンラインの条件、確認する内容。</span></a></li></ul>
+<div class="ctabox">
+  <h2 class="serif">ジェノグラムを、ブラウザで描く</h2>
+  <p>CHERRY BLOSSOM なら、人物記号と関係線を選んで置くだけでジェノグラムとエコマップを作図でき、画像保存・印刷ができます。要介護認定申請書などの書類作成も同じツールで完結。インストール不要・月額550円（税込）、はじめの14日間は無料です。</p>
+  <a class="cta" href="https://keamane-kiroku.cb-cloud.net">14日間無料ではじめる</a>
+</div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span class="b">CHERRY BLOSSOM</span>
+    <small>ケアマネジャーのための業務支援ツール</small>
+    <nav>
+      <a href="/">トップ</a>
+      <a href="/guide/">書類作成ガイド</a>
+      <a href="/faq/">よくある質問</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#operator">運営者情報</a>
+    </nav>
+    <small>&copy; 2026 CHERRY BLOSSOM. All rights reserved.</small>
+  </div>
+</footer>
+
+</body>
+</html>

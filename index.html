@@ -208,6 +208,13 @@
   .op-row dd .ph{color:var(--rose);background:var(--petal-bg);padding:1px 7px;border-radius:5px;font-size:13px;}
   .op-note{max-width:760px;margin:18px auto 0;font-size:12px;color:var(--sub);line-height:1.7;}
 
+  /* screenshot */
+  .shot{background:var(--white);padding:0 0 8px;}
+  .shot figure{max-width:1040px;margin:-40px auto 0;position:relative;z-index:5;}
+  .shot img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 18px 50px rgba(44,49,60,.14);}
+  .shot figcaption{text-align:center;font-size:13px;color:var(--sub);margin-top:16px;line-height:1.8;}
+  @media(max-width:760px){.shot figure{margin-top:-20px;} .shot figcaption{font-size:12.5px;text-align:left;}}
+
   /* genogram */
   .genogram{background:var(--petal-bg);}
   .genogram .more{text-align:center;margin-top:34px;}
@@ -281,6 +288,17 @@
     <p class="note"><strong style="color:var(--rose);">14日間無料でお試し</strong> ／ その後 月額550円（税込）／ いつでも解約できます</p>
   </div>
 </div>
+
+<!-- SCREENSHOT -->
+<section class="shot">
+  <div class="wrap">
+    <figure>
+      <img src="/assets/screenshot-genogram.png" width="1200" height="413" loading="lazy"
+           alt="ジェノグラム・エコマップ作成画面。左のパレットから人物記号や社会資源を選び、キャンバスに配置して関係線でつないだ状態。本人（82歳・二重枠）と妻（79歳）を婚姻線で結び、長男（55歳）を親子線でつなぎ、病院とデイサービスへ強い関係の太線を引いている。">
+      <figcaption>実際の作図画面。左のパレットから記号を選んで置き、線でつなぐだけ。<br>ジェノグラム（家族関係）とエコマップ（社会資源とのつながり）を同じ画面で作れます。</figcaption>
+    </figure>
+  </div>
+</section>
 
 <!-- GENOGRAM（主力機能） -->
 <section class="genogram" id="genogram">
@@ -370,7 +388,7 @@
     <div class="sec-head">
       <span class="kicker">GUIDE</span>
       <h2 class="serif">ケアマネ業務の書類作成ガイド</h2>
-      <p>ジェノグラムの描き方から、ケアプラン・記録・給付管理まで。全16本で解説しています。</p>
+      <p>ジェノグラムの描き方から、ケアプラン・記録・給付管理、事業所の開設まで。全21本で解説しています。</p>
     </div>
     <div class="grid">
       <a class="card" href="/guide/genogram/">
@@ -385,20 +403,20 @@
         <h3>エコマップの書き方と記号・線の意味</h3>
         <p>線の種類による関係の質の描き分け、配置する社会資源、図からの読み取り方。</p>
       </a>
-      <a class="card" href="/guide/care-plan-2/">
-        <h3>ケアプラン第2表の書き方｜ニーズと長期・短期目標</h3>
-        <p>ニーズ・目標・サービスのつなげ方を記載例つきで。よくある指摘と直し方も。</p>
+      <a class="card" href="/guide/ecomap-examples/">
+        <h3>エコマップの書き方の例｜ケース別の記載例</h3>
+        <p>独居ケースと介護負担が偏るケースを図で解説。図からの読み取り方も。</p>
       </a>
-      <a class="card" href="/guide/monitoring/">
-        <h3>モニタリングの進め方と記録の書き方</h3>
-        <p>月1回の訪問・記録の要件、テレビ電話等を使う場合の条件、確認する内容。</p>
+      <a class="card" href="/guide/care-plan-examples/">
+        <h3>ケアプランの文例集｜ニーズと長期・短期目標</h3>
+        <p>移動・入浴・排泄・食事・服薬・社会参加まで、場面別の文例を掲載。</p>
       </a>
-      <a class="card" href="/guide/unei-kijun-gensan/">
-        <h3>運営基準減算とは｜4つのケースと続く期間</h3>
-        <p>発生条件と減算がいつまで続くか、契約月まで遡るケース、防ぐチェックリスト。</p>
+      <a class="card" href="/guide/kyotaku-kaigyo/">
+        <h3>居宅介護支援事業所の開設｜指定申請と事業計画</h3>
+        <p>人員・設備の基準、逓減制を織り込んだ収支の考え方、事業計画書の項目。</p>
       </a>
     </div>
-    <p class="more"><a href="/guide/">書類作成ガイドの一覧（全16本）を見る →</a></p>
+    <p class="more"><a href="/guide/">書類作成ガイドの一覧（全21本）を見る →</a></p>
   </div>
 </section>
 

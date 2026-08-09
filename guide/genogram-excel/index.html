@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ジェノグラムをExcelで作る方法｜手順とつまずくところ｜CHERRY BLOSSOM</title>
+<meta name="description" content="Excel でジェノグラム（家族関係図）を作る具体的な手順を、図形の配置・線の引き方・印刷設定まで解説。あわせて、Excel だと必ずつまずく箇所と、その回避方法も整理しました。">
+<link rel="canonical" href="https://keamane.cb-cloud.net/guide/genogram-excel/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CHERRY BLOSSOM｜ケアマネ業務支援ツール">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="ジェノグラムをExcelで作る方法｜手順とつまずくところ｜CHERRY BLOSSOM">
+<meta property="og:description" content="Excel でジェノグラム（家族関係図）を作る具体的な手順を、図形の配置・線の引き方・印刷設定まで解説。あわせて、Excel だと必ずつまずく箇所と、その回避方法も整理しました。">
+<meta property="og:url" content="https://keamane.cb-cloud.net/guide/genogram-excel/">
+<meta property="og:image" content="https://keamane.cb-cloud.net/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "トップ",
+          "item": "https://keamane.cb-cloud.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "書類作成ガイド",
+          "item": "https://keamane.cb-cloud.net/guide/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Excelで作る",
+          "item": "https://keamane.cb-cloud.net/guide/genogram-excel/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "ジェノグラムをExcelで作る方法と、つまずくところ",
+      "description": "Excel でジェノグラム（家族関係図）を作る具体的な手順を、図形の配置・線の引き方・印刷設定まで解説。あわせて、Excel だと必ずつまずく箇所と、その回避方法も整理しました。",
+      "inLanguage": "ja",
+      "mainEntityOfPage": "https://keamane.cb-cloud.net/guide/genogram-excel/",
+      "image": "https://keamane.cb-cloud.net/assets/og-image.png",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+      "author": {
+        "@type": "Organization",
+        "name": "CHERRY BLOSSOM"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CHERRY BLOSSOM",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://keamane.cb-cloud.net/assets/logo.png"
+        }
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="/">
+      <img src="/assets/logo.png" width="440" height="350" alt="CHERRY BLOSSOM">
+      <span class="name">CHERRY BLOSSOM<small>Care Management Tools</small></span>
+    </a>
+    <nav>
+      <a href="/guide/">書類作成ガイド</a>
+      <a href="/faq/">よくある質問</a>
+      <a href="/#pricing">料金</a>
+    </nav>
+    <a class="login-btn" href="https://keamane-kiroku.cb-cloud.net">ログイン／利用をはじめる</a>
+  </div>
+</header>
+
+<nav class="crumb" aria-label="パンくずリスト">
+  <div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/guide/">書類作成ガイド</a></li><li>Excelで作る</li></ol></div>
+</nav>
+
+<main class="page">
+  <div class="wrap narrow">
+    <h1 class="serif">ジェノグラムをExcelで作る方法と、つまずくところ</h1>
+    <p class="lead">新しいツールを増やさずに済むなら、それに越したことはありません。Excel でジェノグラムを作る手順を具体的に示したうえで、どこで行き詰まるのかも正直に書きます。</p>
+    <p class="updated">最終更新：2026-08-03</p>
+<nav class="toc"><p>目次</p><ol><li><a href="#grid">下準備：方眼にする</a></li><li><a href="#symbols">人物記号を作る</a></li><li><a href="#lines">関係線を引く</a></li><li><a href="#print">印刷の設定</a></li><li><a href="#limits">Excel でつまずくところ</a></li><li><a href="#judge">Excel で十分な場合とそうでない場合</a></li></ol></nav>
+<h2 class="serif" id="grid">下準備：方眼にする</h2>
+<p>Excel でジェノグラムを描くとき、最初にやるべきは<strong>セルを正方形にすること</strong>です。これをやらないと、図形の位置がそろわず、後で必ず苦労します。</p>
+<ol><li>全体を選択（左上の三角をクリック）</li><li>列の境界をドラッグして<strong>幅を「2.00（19ピクセル）」程度</strong>に</li><li>行の高さも同じく<strong>19ピクセル程度</strong>に</li><li>表示 → 目盛線をオンのままにしておく</li></ol>
+<p>これで方眼紙の状態になります。図形を配置するときに <kbd>Alt</kbd> を押しながらドラッグすると、セルの角にぴたりと吸着するので、位置がそろいます。</p>
+<h2 class="serif" id="symbols">人物記号を作る</h2>
+<h3>男性（四角）と女性（丸）</h3>
+<ol><li>挿入 → 図形 → 「正方形／長方形」または「楕円」</li><li><kbd>Shift</kbd> を押しながらドラッグすると、正方形・正円になる</li><li>図形の書式 → 図形の塗りつぶし → <strong>「塗りつぶしなし」</strong></li><li>図形の枠線 → 黒、太さ 1.5pt 程度</li></ol>
+<p>サイズは<strong>すべて同じ</strong>にします。最初の1つを作ったら、<kbd>Ctrl</kbd>+<kbd>D</kbd> で複製して使い回すのが確実です。手で描き足すと必ず大きさがばらつきます。</p>
+<h3>本人（二重枠）</h3>
+<p>四角（または丸）を作り、それを複製して少し大きくし、両方を選択して<strong>「グループ化」</strong>します。中央揃え・上下中央揃えで位置を合わせてからグループ化すると、後で動かしてもずれません。</p>
+<h3>死亡（斜線）</h3>
+<p>記号の上に「線」を1本引いて、記号と線をグループ化します。図形の「×」を重ねる方法もありますが、線のほうが印刷したときにきれいです。</p>
+<h3>名前と年齢を入れる</h3>
+<p>図形を右クリック →「テキストの編集」で図形の中に年齢を入れられます。名前は図形の下に<strong>テキストボックス</strong>を置きます。テキストボックスは「塗りつぶしなし」「枠線なし」にしておきます。</p>
+<h2 class="serif" id="lines">関係線を引く</h2>
+<div class="tbl-scroll"><table><thead><tr><th>関係</th><th>作り方</th></tr></thead><tbody><tr><td>婚姻</td><td>「線」を水平に引く。<kbd>Shift</kbd> を押しながらで水平が固定される</td></tr><tr><td>離婚</td><td>婚姻線の上に短い斜線を2本重ねる</td></tr><tr><td>別居</td><td>婚姻線の上に短い斜線を1本重ねる</td></tr><tr><td>同居・内縁</td><td>線の書式 → 実線／点線 → 破線を選ぶ</td></tr><tr><td>親子</td><td>婚姻線の中点から下へ垂直線 →  水平に伸ばす → 各子へ垂直に降ろす。「カギ線コネクタ」を使うと楽</td></tr><tr><td>同居範囲</td><td>「正方形／長方形」を置き、塗りつぶしなし・枠線を破線にして、囲みたい範囲に重ねる</td></tr></tbody></table></div>
+<p>コネクタ（挿入 → 図形 → 線 → カギ線コネクタ）を使うと、<strong>図形を動かしたときに線がついてきます</strong>。ただの「線」だと置き去りになるので、コネクタを使うほうが後の修正が楽です。</p>
+<h2 class="serif" id="print">印刷の設定</h2>
+<ol><li>ページレイアウト → 印刷の向き（横のほうが収まりやすい）</li><li>ページレイアウト → 印刷範囲 → 印刷範囲の設定</li><li>ページレイアウト → 拡大縮小印刷 → <strong>「1ページに収める」</strong></li><li>図形を右クリック → 図形の書式設定 → プロパティ → <strong>「オブジェクトを印刷する」にチェック</strong></li></ol>
+<p>最後の項目が抜けていると、画面に見えているのに<strong>印刷すると図形だけ出てこない</strong>という事故が起きます。これは Excel でよくある落とし穴です。</p>
+<h2 class="serif" id="limits">Excel でつまずくところ</h2>
+<p>ここまでの手順で作れます。ただ、実務で回し始めると次の壁に当たります。</p>
+<h3>人を1人足すと配置が総崩れになる</h3>
+<p>「次男がいることが後から分かった」というのは日常茶飯事です。Excel だと、間に1人入れるために<strong>周囲の図形をすべて手で動かす</strong>ことになります。子が4人いる家族で1人追加すると、線の引き直しを含めて10分では終わりません。</p>
+<h3>記号のルールを自分で覚えておく必要がある</h3>
+<p>「離婚は斜線2本、別居は1本」を毎回思い出すことになります。しばらく作らない期間があると、必ずどちらかを忘れます。専用ツールなら一覧に「離婚」「別居」と名前で並んでいます。</p>
+<h3>サイズと太さがばらつく</h3>
+<p>複製して使っていても、うっかり端をドラッグして大きさが変わります。印刷すると、そろっていない図は素人くさく見えます。担当者会議の資料としては気になるところです。</p>
+<h3>ファイルが人によってばらばらになる</h3>
+<p>事業所内で共有すると、各自が自己流に改変していきます。半年後には<strong>「最新版がどれか分からない」</strong>状態になります。</p>
+<h2 class="serif" id="judge">Excel で十分な場合とそうでない場合</h2>
+<div class="tbl-scroll"><table><thead><tr><th>状況</th><th>判断</th></tr></thead><tbody><tr><td>作るのが年に数回</td><td>Excel で十分。新しいツールを覚えるコストのほうが高い</td></tr><tr><td>家族構成が単純（夫婦と子1〜2人）</td><td>Excel で十分</td></tr><tr><td>担当が20人以上いて毎月どれかを更新する</td><td>専用ツールのほうが早い</td></tr><tr><td>エコマップも作りたい</td><td>Excel だと線種の描き分けが煩雑。専用ツール向き</td></tr><tr><td>事業所で様式をそろえたい</td><td>専用ツールのほうが崩れない</td></tr></tbody></table></div>
+<p>判断の目安を一つ挙げるなら、<strong>「1枚作るのに20分以上かかっていると感じたら」</strong>です。それが月に何枚もあるなら、道具を変えたほうが早く回収できます。</p>
+<p>選び方の観点は<a href="/guide/genogram-tools/">ジェノグラム作成ツールの選び方</a>にまとめています。</p>
+<h2 class="serif" id="related">関連するガイド</h2><ul class="cards"><li><a href="/guide/genogram-tools/"><span class="t">ジェノグラム作成ツールの選び方｜確認したい7つの点</span><span class="d">再編集・印刷・保存先・記号の網羅性など、業務前提の判断基準。</span></a></li><li><a href="/guide/genogram-print/"><span class="t">ジェノグラムの印刷｜用紙・レイアウトと綴じ方</span><span class="d">用紙サイズの選び方、崩れるときの対処、記録への添付。</span></a></li><li><a href="/guide/genogram-save/"><span class="t">ジェノグラムの保存・再編集・共有と個人情報</span><span class="d">保存形式の使い分け、更新の運用、事業所での共有ルール。</span></a></li></ul>
+<div class="ctabox">
+  <h2 class="serif">ジェノグラムを、ブラウザで描く</h2>
+  <p>CHERRY BLOSSOM なら、人物記号と関係線を選んで置くだけでジェノグラムとエコマップを作図でき、画像保存・印刷ができます。要介護認定申請書などの書類作成も同じツールで完結。インストール不要・月額550円（税込）、はじめの14日間は無料です。</p>
+  <a class="cta" href="https://keamane-kiroku.cb-cloud.net">14日間無料ではじめる</a>
+</div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span class="b">CHERRY BLOSSOM</span>
+    <small>ケアマネジャーのための業務支援ツール</small>
+    <nav>
+      <a href="/">トップ</a>
+      <a href="/guide/">書類作成ガイド</a>
+      <a href="/faq/">よくある質問</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#operator">運営者情報</a>
+    </nav>
+    <small>&copy; 2026 CHERRY BLOSSOM. All rights reserved.</small>
+  </div>
+</footer>
+
+</body>
+</html>

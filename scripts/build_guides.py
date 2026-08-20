@@ -70,9 +70,9 @@ SVG_KIGO_HITO = """<svg viewBox="0 0 460 220" role="img" aria-label="ジェノ�
   <rect class="g-node" x="122" y="136" width="44" height="44"/>
   <line class="g-dead" x1="122" y1="136" x2="166" y2="180"/>
   <line class="g-dead" x1="166" y1="136" x2="122" y2="180"/>
-  <rect class="g-node" x="294" y="136" width="44" height="44" fill="#2c313c"/>
+  <rect class="g-node" x="294" y="136" width="44" height="44" style="fill:#2c313c"/>
   <text class="n" x="144" y="204" text-anchor="middle">死亡（×を入れる）</text>
-  <text class="n" x="316" y="204" text-anchor="middle">death（塗りつぶす）</text>
+  <text class="n" x="316" y="204" text-anchor="middle">死亡（塗りつぶす）</text>
 </svg>"""
 
 SVG_KIGO_SEN = """<svg viewBox="0 0 460 300" role="img" aria-label="ジェノグラムの関係線。婚姻は横線、離婚は斜線2本、別居は斜線1本">
@@ -122,7 +122,6 @@ SVG_SANSEDAI = """<svg viewBox="0 0 460 330" role="img" aria-label="三世代の
   <path class="g-line" d="M192 170 V252 H190 V268"/>
   <rect class="g-node" x="168" y="268" width="44" height="44"/>
   <text class="n" x="190" y="326" text-anchor="middle">長男 56</text>
-  <text x="189" y="122" text-anchor="middle">点線の囲み ＝ 同居</text>
 </svg>"""
 
 

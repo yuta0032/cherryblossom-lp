@@ -57,6 +57,75 @@ FOOTER = """<footer>
   </div>
 </footer>"""
 
+SVG_KIGO_HITO = """<svg viewBox="0 0 460 220" role="img" aria-label="ジェノグラムで使う人物記号。男性は四角、女性は丸、本人は二重枠、死亡は×または塗りつぶし">
+  <rect class="g-node" x="54" y="26" width="44" height="44"/>
+  <circle class="g-node" cx="216" cy="48" r="22"/>
+  <rect class="g-node" x="356" y="26" width="44" height="44"/>
+  <rect class="g-self" x="346" y="16" width="64" height="64"/>
+  <text class="n" x="76"  y="98" text-anchor="middle">男性</text>
+  <text class="n" x="216" y="98" text-anchor="middle">女性</text>
+  <text class="n" x="378" y="98" text-anchor="middle">本人（利用者）</text>
+  <text x="378" y="115" text-anchor="middle">二重の枠で囲む</text>
+
+  <rect class="g-node" x="122" y="136" width="44" height="44"/>
+  <line class="g-dead" x1="122" y1="136" x2="166" y2="180"/>
+  <line class="g-dead" x1="166" y1="136" x2="122" y2="180"/>
+  <rect class="g-node" x="294" y="136" width="44" height="44" fill="#2c313c"/>
+  <text class="n" x="144" y="204" text-anchor="middle">死亡（×を入れる）</text>
+  <text class="n" x="316" y="204" text-anchor="middle">death（塗りつぶす）</text>
+</svg>"""
+
+SVG_KIGO_SEN = """<svg viewBox="0 0 460 300" role="img" aria-label="ジェノグラムの関係線。婚姻は横線、離婚は斜線2本、別居は斜線1本">
+  <text class="n" x="100" y="65"  text-anchor="end">婚姻</text>
+  <rect class="g-node" x="140" y="38" width="44" height="44"/>
+  <line class="g-line" x1="184" y1="60" x2="298" y2="60"/>
+  <circle class="g-node" cx="320" cy="60" r="22"/>
+
+  <text class="n" x="100" y="155" text-anchor="end">離婚</text>
+  <rect class="g-node" x="140" y="128" width="44" height="44"/>
+  <line class="g-line" x1="184" y1="150" x2="298" y2="150"/>
+  <line class="g-line" x1="228" y1="132" x2="244" y2="168"/>
+  <line class="g-line" x1="244" y1="132" x2="260" y2="168"/>
+  <circle class="g-node" cx="320" cy="150" r="22"/>
+
+  <text class="n" x="100" y="245" text-anchor="end">別居</text>
+  <rect class="g-node" x="140" y="218" width="44" height="44"/>
+  <line class="g-line" x1="184" y1="240" x2="298" y2="240"/>
+  <line class="g-line" x1="234" y1="222" x2="250" y2="258"/>
+  <circle class="g-node" cx="320" cy="240" r="22"/>
+  <text x="230" y="290" text-anchor="middle">左が男性、右が女性で描くのが一般的</text>
+</svg>"""
+
+SVG_SANSEDAI = """<svg viewBox="0 0 460 330" role="img" aria-label="三世代のジェノグラムの例。親世代、本人世代、子世代を上から順に並べ、同居範囲を点線で囲む">
+  <rect class="g-house" x="72" y="128" width="234" height="184" rx="8"/>
+
+  <rect class="g-node" x="108" y="26" width="44" height="44"/>
+  <line class="g-dead" x1="108" y1="26" x2="152" y2="70"/>
+  <line class="g-dead" x1="152" y1="26" x2="108" y2="70"/>
+  <line class="g-line" x1="152" y1="48" x2="222" y2="48"/>
+  <circle class="g-node" cx="244" cy="48" r="22"/>
+  <text class="n" x="130" y="90" text-anchor="middle">父（他界）</text>
+  <text class="n" x="244" y="90" text-anchor="middle">母 88</text>
+
+  <path class="g-line" d="M187 48 V108 H130 V148"/>
+  <path class="g-line" d="M187 108 H392 V148"/>
+
+  <rect class="g-node" x="108" y="148" width="44" height="44"/>
+  <rect class="g-self" x="98" y="138" width="64" height="64"/>
+  <line class="g-line" x1="162" y1="170" x2="222" y2="170"/>
+  <circle class="g-node" cx="244" cy="170" r="22"/>
+  <rect class="g-node" x="370" y="148" width="44" height="44"/>
+  <text class="n" x="130" y="222" text-anchor="middle">本人 84</text>
+  <text class="n" x="244" y="212" text-anchor="middle">妻 80</text>
+  <text class="n" x="392" y="212" text-anchor="middle">弟 79</text>
+
+  <path class="g-line" d="M192 170 V252 H190 V268"/>
+  <rect class="g-node" x="168" y="268" width="44" height="44"/>
+  <text class="n" x="190" y="326" text-anchor="middle">長男 56</text>
+  <text x="189" y="122" text-anchor="middle">点線の囲み ＝ 同居</text>
+</svg>"""
+
+
 CTABOX = f"""<div class="ctabox">
   <h2 class="serif">ジェノグラムを、ブラウザで描く</h2>
   <p>CHERRY BLOSSOM なら、人物記号と関係線を選んで置くだけでジェノグラムとエコマップを作図でき、画像保存・印刷ができます。要介護認定申請書などの書類作成も同じツールで完結。インストール不要・月額550円（税込）、はじめの14日間は無料です。</p>
@@ -596,6 +665,8 @@ PAGES.append({
             ["下向きの線でつなぐ", "親子関係。子は左から年齢順に並べる"],
             ["点線で囲む", "同居している範囲"],
         ]),
+        ("fig", "人物の記号。男性は四角、女性は丸で描き、本人（利用者）は二重の枠で囲んで中心に置きます。死亡は記号の中に×を入れるか、記号を塗りつぶします。どちらの書き方も現場で使われています。", SVG_KIGO_HITO),
+        ("fig", "関係線。婚姻は横線、離婚は斜線2本、別居は斜線1本で描き分けます。線の書き方だけで関係の変化が伝わります。", SVG_KIGO_SEN),
         ("p", "記号の脇には<strong>年齢（または生年）と続柄</strong>を添えます。キーパーソンには印をつけておくと、後から見返したときに支援の中心が誰なのかがすぐわかります。"),
 
         ("h2", "描く手順", "steps"),
@@ -608,6 +679,7 @@ PAGES.append({
             "<strong>同居範囲を囲む</strong> — 点線で囲み、世帯の単位を明確にする",
             "<strong>補足を書き添える</strong> — 遠方に住んでいる、疎遠である、介護に協力的である、といった情報を欄外に短く記す",
         ]),
+        ("fig", "手順どおりに描いた三世代の例。本人を二重枠にして中央に置き、上に親世代、下に子世代を並べます。同居している範囲は点線で囲むと世帯の単位がひと目で分かります。", SVG_SANSEDAI),
         ("note", "ジェノグラムには家族関係の機微な情報が含まれます。利用者・家族に見せる場面と、事業所内での記録として扱う場面を意識して、記載の粒度を調整してください。"),
 
         ("h2", "エコマップとの違い", "ecomap"),

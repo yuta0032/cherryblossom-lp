@@ -15,6 +15,11 @@ APP = "https://keamane-kiroku.cb-cloud.net"
 UPDATED = "2026-08-03"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ADSENSE = (
+    '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+    '?client=ca-pub-7185839013309034" crossorigin="anonymous"></script>'
+)
+
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -218,6 +223,7 @@ def render_page(page, all_pages):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{ADSENSE}
 <title>{html.escape(page['title'])}</title>
 <meta name="description" content="{html.escape(page['description'])}">
 <link rel="canonical" href="{url}">
@@ -2336,16 +2342,19 @@ def main():
 
     # sitemap
     entries = [("/", "1.0", "monthly"), ("/guide/", "0.8", "monthly"), ("/faq/", "0.7", "monthly")]
+    # 手書きページ（AdSense 審査に必要）。生成対象ではないが sitemap には載せる
+    EXTRA = [("/privacy/", "0.3", "yearly", "2026-08-20"), ("/contact/", "0.3", "yearly", "2026-08-20")]
     # 主力機能（ジェノグラム・エコマップ）の記事は優先度を上げる
     main_paths = set(CATEGORIES[0][2])
     entries += [
         (p["path"], "0.9" if p["path"] in main_paths else "0.7", "monthly")
         for p in GUIDE_ARTICLES
     ]
+    rows = [(path, pri, freq, UPDATED) for path, pri, freq in entries] + EXTRA
     urls = "\n".join(
-        f"  <url>\n    <loc>{SITE}{path}</loc>\n    <lastmod>{UPDATED}</lastmod>\n"
+        f"  <url>\n    <loc>{SITE}{path}</loc>\n    <lastmod>{mod}</lastmod>\n"
         f"    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>\n  </url>"
-        for path, pri, freq in entries
+        for path, pri, freq, mod in rows
     )
     sitemap = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -2354,7 +2363,7 @@ def main():
     )
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(sitemap)
-    print("wrote sitemap.xml", f"({len(entries)} urls)")
+    print("wrote sitemap.xml", f"({len(rows)} urls)")
 
 
 if __name__ == "__main__":

@@ -38,7 +38,7 @@ HEADER = f"""<header>
       <a href="/faq/">よくある質問</a>
       <a href="/#pricing">料金</a>
     </nav>
-    <a class="login-btn" href="{APP}">ログイン／利用をはじめる</a>
+    <a class="login-btn" href="{APP}"><span class="lb-long">ログイン／利用をはじめる</span><span class="lb-short">ログイン</span></a>
   </div>
 </header>"""
 

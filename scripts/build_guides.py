@@ -5,6 +5,7 @@
 出力先:  guide/ , faq/ , sitemap.xml
 """
 
+import hashlib
 import html
 import json
 import os
@@ -14,6 +15,18 @@ SITE = "https://keamane.cb-cloud.net"
 APP = "https://keamane-kiroku.cb-cloud.net"
 UPDATED = "2026-08-03"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# CSS はブラウザに4時間キャッシュされる（Cloudflare Pages の既定）。
+# URL が同じだと、HTML だけ新しくなって CSS が古いまま、という状態が起きる。
+# 内容のハッシュを付けて、中身が変われば必ず取り直させる。
+def _asset_href(rel):
+    path = os.path.join(ROOT, rel.lstrip("/"))
+    with open(path, "rb") as f:
+        h = hashlib.md5(f.read()).hexdigest()[:8]
+    return f"{rel}?v={h}"
+
+
+CSS_HREF = _asset_href("/assets/site.css")
 
 ADSENSE = (
     '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
@@ -306,7 +319,7 @@ def render_page(page, all_pages):
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 {FONTS}
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="{CSS_HREF}">
 <script type="application/ld+json">
 {ld}
 </script>

@@ -17,20 +17,39 @@ body{
 
 /* header */
 header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-.hd{display:flex;align-items:center;gap:12px;height:64px;}
+/* 高さは固定しない。狭い画面で中身がはみ出して重なるのを防ぐ。 */
+.hd{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 0;}
 .hd img{height:40px;width:auto;display:block;}
-.hd a.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;}
+.hd a.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;min-width:0;}
+/* トップページは a.brand が無く img と .name が直接並ぶ。どちらの構造でも効くようにする。 */
+.hd img{flex:none;}
+.hd .name{flex:none;}
 .hd .login-btn{margin-left:auto;display:inline-flex;align-items:center;gap:6px;background:var(--rose);color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:background .2s,transform .1s;}
 .hd .login-btn:hover{background:var(--rose-dark);}
 .hd .login-btn:active{transform:scale(.98);}
-.hd .name{font-family:'Noto Serif JP',serif;font-weight:600;font-size:16px;letter-spacing:.04em;color:var(--ink);}
-.hd .name small{display:block;font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:11px;color:var(--sub);letter-spacing:.08em;}
+/* 「CHERRY BLOSSOM」を折り返させない。折り返すとヘッダーが3行になって崩れる。 */
+.hd .name{font-family:'Noto Serif JP',serif;font-weight:600;font-size:16px;letter-spacing:.04em;color:var(--ink);white-space:nowrap;line-height:1.35;}
+.hd .name small{display:block;font-family:'Noto Sans JP',sans-serif;font-weight:400;font-size:11px;color:var(--sub);letter-spacing:.08em;white-space:nowrap;line-height:1.5;}
 .hd nav{margin-left:auto;display:flex;gap:20px;}
 .hd nav a{font-size:13.5px;font-weight:500;color:var(--ink);text-decoration:none;white-space:nowrap;}
 .hd nav a:hover{color:var(--rose);}
 .hd nav + .login-btn{margin-left:20px;}
-@media (max-width:760px){.hd nav{display:none;} .hd nav + .login-btn{margin-left:auto;}}
-@media (max-width:520px){.hd .login-btn{font-size:12px;padding:8px 14px;} .hd .name small{display:none;}}
+@media (max-width:760px){
+  .hd nav{display:none;} .hd nav + .login-btn{margin-left:auto;}
+  header .wrap{padding:0 16px;}
+  .hd{gap:10px;} .hd a.brand{gap:10px;}
+  .hd img{height:34px;}
+  .hd .name{font-size:15px;}
+}
+@media (max-width:520px){
+  .hd .login-btn{font-size:12px;padding:8px 14px;}
+  .hd .name small{display:none;}
+}
+@media (max-width:400px){
+  .hd img{height:30px;}
+  .hd .name{font-size:13.5px;letter-spacing:.02em;}
+  .hd .login-btn{font-size:11.5px;padding:7px 11px;}
+}
 
 /* breadcrumb */
 .crumb{background:var(--petal-bg);border-bottom:1px solid var(--line);}
